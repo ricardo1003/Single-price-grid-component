@@ -1,8 +1,11 @@
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background-color: hsl(218, 22%, 67%);
+    background-color: hsl(204, 43%, 93%);
     font-family: "Karla";
 }
 main{
@@ -10,6 +13,10 @@ main{
     padding: 0 2em;
 }
 article{
+    max-width: 688px;
+    margin: 0 auto;
+    display: grid;
+    box-shadow: 0 10px 30px hsla(218, 22%, 67%, 75%);
     border-radius: 5px;
     overflow: hidden;
     -webkit-border-radius: 5px;
@@ -22,7 +29,8 @@ article section{
     padding: 1.5em;
 }
 article>:first-child{
-    background-color: hsl(204, 43%, 93%);
+    grid-column: span 2;
+    background-color: white;
 }
 article>:first-child h1{
     color: hsl(179, 62%, 43%);
@@ -102,7 +110,11 @@ article>:nth-child(3) ul li{
     color: hsla(204, 43%, 93%, 50%);
     list-style-type: none;
 }
-
+@media only screen and (max-width:550px){
+    article>:first-child{
+        grid-column: span 1;
+    }
+}
 
 
 
